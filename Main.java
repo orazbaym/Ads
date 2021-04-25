@@ -1,6 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Main {
 
@@ -14,12 +14,12 @@ public class Main {
         }
     }
 
-    public static class MyArrayList<T> {
+    public static class MyDoublyLinkedList<T> {
         private MyNode<T> head;
         private MyNode<T> tail;
         private int size;
 
-        public MyArrayList() {
+        public MyDoublyLinkedList() {
         }
 
         public void add(int newItem){
@@ -126,7 +126,7 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        MyArrayList<Integer> arr = new MyArrayList<>();
+        MyDoublyLinkedList<Integer> arr = new MyDoublyLinkedList<>();
         arr.add(10);
         arr.add(12);
         arr.add(22);
@@ -135,12 +135,12 @@ public class Main {
         arr.add(82);
         arr.add_new(100,2);//add method
         arr.remove(4);//remove method
-        System.out.print("ArrayList : ");
+        System.out.print("LinkedList : ");
         arr.print();
         arr.reverse();
-        System.out.print("ArrayList reversed: ");
+        System.out.print("LinkedList reversed: ");
         arr.print();
-        int k = arr.find(100);
-        System.out.println("k (find method) = " + k);
+        int val = 10;
+        System.out.println("index of " + val + " (find method) = " + arr.find(val));
     }
 }
